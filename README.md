@@ -36,17 +36,17 @@ Ensure you have the following installed on your machine:
 ##  Application Setup
 
 Scaffold the database(db first approach):**
-     Scaffold the database using the following command:
+   1.  Scaffold the database using the following command:
      ```
      Scaffold-DbContext "Server=localhost;Database=PasswordManagerDB;User Id=sa;Password=vaishu@15;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
      ```
-     The models and dbContext are created.
+   2.  The models and dbContext are created.
      The nuget packages are installed.
      ```Microsoft.EntityFrameworkCore.Tools
         Microsoft.EntityFrameworkCore.SqlServer
         Microsoft.EntityFrameworkCore.Design
      ```
-     Project Reference is added for the class library project like Services,Repositories.
+   3.  Project Reference is added for the class library project like Services,Repositories.
      Run the application using IISExpress.
      
 
