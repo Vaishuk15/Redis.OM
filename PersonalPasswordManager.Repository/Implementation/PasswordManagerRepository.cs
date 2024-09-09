@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PersonalPasswordManager.Repository.Implementation
 {
@@ -41,7 +40,7 @@ namespace PersonalPasswordManager.Repository.Implementation
 
             if (existingPassword == null)
             {
-                throw new Exception($"Password with ID {id} not found");
+                return false;
             }
             existingPassword.App = password.App;
             existingPassword.Category = password.Category;

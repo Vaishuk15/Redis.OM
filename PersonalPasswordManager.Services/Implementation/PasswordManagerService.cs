@@ -63,8 +63,8 @@ namespace PersonalPasswordManager.Services.Implementation
                 passwordConfig.EncryptedPassword = Base64Helper.EncodeToBase64(passwordConfig.DecryptedPassword);
             }
             var password = _mapper.Map<Password>(passwordConfig);
-            await _passwordManagerRepository.Update(id, password);
-            return true;
+            var result=await _passwordManagerRepository.Update(id, password);
+            return result;
         }
         public async Task Delete(int id)
         {

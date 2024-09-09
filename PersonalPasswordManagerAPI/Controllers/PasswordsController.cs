@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Models.ViewModels;
 using PersonalPasswordManager.Services.Interface;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PersonalPasswordManagerAPI.Controllers
 {
@@ -47,6 +46,10 @@ namespace PersonalPasswordManagerAPI.Controllers
         public async Task<IActionResult> Update(int id, PasswordViewModel externalDatabaseConfig)
         {
             var result=await _passwordService.Update(id, externalDatabaseConfig);
+            if (!result)
+            {
+                return BadRequest();
+            }
             return Ok(result);
         }
         [HttpDelete("{id}")]
