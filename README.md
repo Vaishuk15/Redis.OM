@@ -1,4 +1,4 @@
-# PersonalPasswordManagerAPI
+# Redis.OM in PersonalPasswordManagerAPI
 
 PersonalPasswordManagerAPI is a .NET 8.0 API designed for managing passwords.
 ## Table of Contents
