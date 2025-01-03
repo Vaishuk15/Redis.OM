@@ -1,6 +1,6 @@
 # Redis.OM in PersonalPasswordManagerAPI
 
-PersonalPasswordManagerAPI is a .NET 8.0 API designed for managing passwords.
+PersonalPasswordManagerAPI is a .NET 8.0 API designed for managing passwords and Redis.OM object mapping is used in order to store the value as json and key as string.
 ## Table of Contents
 
 - [PersonalPasswordManagerAPI](#personalpasswordmanagerapi)
@@ -32,6 +32,8 @@ Ensure you have the following installed on your machine:
 3. ** Run Sql Script to create database and tables:**
      Run the script in the SqlServerManagementStudio
      File: init.sql
+4. ** For Redis-stack docker set-up **
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest   
 
 ##  Application Setup
 
@@ -50,8 +52,7 @@ Scaffold the database(db first approach):**
      Run the application using IISExpress.
      
 
-## For Redis-stack docker set-up 
-docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+
 
 
 
