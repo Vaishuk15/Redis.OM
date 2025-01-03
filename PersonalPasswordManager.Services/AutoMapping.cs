@@ -15,6 +15,8 @@ namespace PersonalPasswordManager.Services
         public AutoMapping() {
 
             CreateMap<PasswordViewModel, Password>().ReverseMap();
+            CreateMap<RedisRepository.JsonModel.Password, Password>().ReverseMap();
+            CreateMap<RedisRepository.JsonModel.Password, PasswordViewModel>().ReverseMap();
         }
 
     }
